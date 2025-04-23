@@ -3,13 +3,10 @@ import { useState } from "react";
 // components
 import CardAccordionItem from "./CardAccordionItem";
 
-function CardAccordionList() {
-	const cardList = [1, 2, 3, 4, 5, 6];
-
+function CardAccordionList({ cardsInfo }) {
 	const [activeIndex, setActiveIndex] = useState(1);
 
 	function handleShow(id) {
-		console.log(id);
 		setActiveIndex(id);
 	}
 
@@ -19,15 +16,16 @@ function CardAccordionList() {
 
 	return (
 		<>
-			{cardList.map((card, index) => {
+			{cardsInfo.map((card) => {
+				const id = card.projectNumber;
 				return (
 					<CardAccordionItem
-						key={index}
 						cardData={card}
-						onShow={(ref) => handleShow(index, ref)}
-						onHide={() => handleHide(index)}
-						activeIndex={activeIndex}
-						index={index}
+						key={id}
+						onShow={(ref) => handleShow(id, ref)}
+						onHide={() => handleHide(id)}
+						isActive={id === activeIndex ? true : false}
+						id={id}
 					/>
 				);
 			})}
