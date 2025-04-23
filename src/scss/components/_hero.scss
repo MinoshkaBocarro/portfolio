@@ -1,0 +1,44 @@
+@use "../abstracts/" as *;
+
+#hero-section {
+	display: grid;
+	grid-template-rows: 12fr 5fr 10fr 7fr 5fr 12fr;
+	grid-template-areas: "." "intro" "name" "subtitle" "button" ".";
+	align-items: center;
+	justify-items: center;
+	height: calc(100vh - 248px);
+	min-height: calc(620px - 248px);
+	position: relative;
+
+	h1 {
+		margin: 0px;
+	}
+
+	.intro {
+		font-size: 3rem;
+		padding-bottom: 10px;
+		grid-area: intro;
+	}
+
+	.name {
+		font-size: 5rem;
+		padding-bottom: 30px;
+		font-family: $accentFontStack;
+		font-weight: 700;
+		grid-area: name;
+		text-align: center;
+	}
+
+	.subtitle {
+		font-size: 2.75rem;
+		padding-bottom: 40px;
+		grid-area: subtitle;
+	}
+
+	.button {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		grid-area: button;
+	}
+}

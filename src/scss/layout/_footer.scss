@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+footer {
+	@extend %barBase;
+
+	text-align: center;
+	height: 50px;
+	margin-top: 24px;
+	font-size: 1.25rem;
+	margin-bottom: 10px;
+
+	span {
+		color: $textColor;
+	}
+}

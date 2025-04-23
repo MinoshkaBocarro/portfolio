@@ -13,7 +13,11 @@
 @use "./base/base";
 
 // component imports
+@use "./components/hero";
 
 // layout imports
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/appContent";
 
 // pages imports

@@ -1,0 +1,47 @@
+@use "../abstracts/" as *;
+
+#navbar {
+	@extend %barBase;
+	height: 70px;
+	margin-top: 5px;
+}
+
+.navbar {
+	.nav-link {
+		color: inherit;
+
+		&:hover {
+			color: $accentColorMuted;
+		}
+	}
+}
+
+.favicon {
+	height: 60px;
+	width: 60px;
+}
+
+//Glow Styling
+.glow-area {
+	cursor: none;
+	position: relative;
+}
+
+.glow {
+	position: fixed;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 10px solid #00fff7;
+	mix-blend-mode: screen;
+	pointer-events: none;
+	transition: width 0.2s ease, height 0.2s ease;
+	z-index: 100;
+
+	&.hide {
+		width: 0px;
+		height: 0px;
+		border: none;
+	}
+}

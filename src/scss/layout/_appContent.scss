@@ -1,0 +1,10 @@
+#app-content {
+	min-height: calc(100vh - 170px);
+	line-height: normal;
+}
+
+#page-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
