@@ -1,3 +1,8 @@
+// logos
+import jsLogo from "../../../assets/logo-svgs/js.svg";
+import cssLogo from "../../../assets/logo-svgs/css.svg";
+import htmlLogo from "../../../assets/logo-svgs/html.svg";
+
 function CardAccordionItem({ cardData, onShow, onHide, isActive, id }) {
 	const {
 		projectName,
@@ -6,6 +11,42 @@ function CardAccordionItem({ cardData, onShow, onHide, isActive, id }) {
 		liveLink,
 		image: { src, alt },
 	} = cardData;
+
+	// generate array with logos based on tech used
+	function getLogos() {
+		return cardData.techUsed.map((tech, index) => {
+			if (tech === "js") {
+				return (
+					<img
+						className="logo"
+						alt="javascript logo"
+						src={jsLogo}
+						key={index}
+					/>
+				);
+			}
+			if (tech === "css") {
+				return (
+					<img
+						className="logo"
+						alt="css logo"
+						src={cssLogo}
+						key={index}
+					/>
+				);
+			}
+			if (tech === "html") {
+				return (
+					<img
+						className="logo"
+						alt="html logo"
+						src={htmlLogo}
+						key={index}
+					/>
+				);
+			}
+		});
+	}
 
 	return (
 		<div>
@@ -23,7 +64,7 @@ function CardAccordionItem({ cardData, onShow, onHide, isActive, id }) {
 							Live Website
 						</a>
 					</div>
-					<div className="tech"></div>
+					<div className="tech">{getLogos()}</div>
 				</div>
 			) : (
 				<></>
