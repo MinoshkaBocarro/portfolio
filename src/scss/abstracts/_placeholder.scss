@@ -5,3 +5,33 @@
 	padding: 13px 0;
 	font-weight: 600;
 }
+
+%buttonBase {
+	font-size: 1.5rem;
+	min-width: max-content;
+	width: fit-content;
+	height: 55px;
+	padding: 0 20px;
+	border-radius: 8px;
+	background-color: $primaryColor;
+	color: $primaryColorText;
+	box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.16);
+}
+
+%buttonGlowBase {
+	animation: forge-glow-effect 1.5s infinite alternate;
+	border-color: $accentColor;
+}
+
+@keyframes forge-glow-effect {
+	0% {
+		box-shadow: 0 0 2px $accentColor, 0 0 3px $accentColor,
+			0 0 4px $accentColor;
+		transform: scale(1.02);
+	}
+	100% {
+		box-shadow: 0 0 4px $accentColor, 0 0 6px $accentColor,
+			0 0 8px $accentColor;
+		transform: scale(1.04);
+	}
+}

@@ -2,6 +2,7 @@
 import jsLogo from "../../../assets/logo-svgs/js.svg";
 import cssLogo from "../../../assets/logo-svgs/css.svg";
 import htmlLogo from "../../../assets/logo-svgs/html.svg";
+import MbButton from "../../common/MbButton";
 
 function CardAccordionItem({ cardData, onShow, onHide, isActive, id }) {
 	const {
@@ -69,9 +70,9 @@ function CardAccordionItem({ cardData, onShow, onHide, isActive, id }) {
 			) : (
 				<></>
 			)}
-			<button onClick={isActive ? onHide : () => onShow(id)}>
+			<MbButton onClick={isActive ? onHide : () => onShow(id)}>
 				{isActive ? "Close" : " Open"}
-			</button>
+			</MbButton>
 		</div>
 	);
 }
