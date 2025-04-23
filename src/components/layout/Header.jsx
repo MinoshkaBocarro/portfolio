@@ -1,6 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Divider from "../common/Divider";
 
 function Header() {
 	return (
@@ -32,7 +31,6 @@ function Header() {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
-			<Divider />
 		</>
 	);
 }
