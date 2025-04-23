@@ -1,5 +1,5 @@
-function CardItem() {
-	return <div> Card Item</div>;
+function CardAccordionItem({ cardData }) {
+	return <div> Card Item {cardData}</div>;
 }
 
-export default CardItem;
+export default CardAccordionItem;
