@@ -1,18 +1,13 @@
-// logos
+// Components
+import OpenCard from "./OpenCard";
+import ClosedCard from "./ClosedCard";
+
+//Images
 import jsLogo from "../../../assets/logo-svgs/js.svg";
 import cssLogo from "../../../assets/logo-svgs/css.svg";
 import htmlLogo from "../../../assets/logo-svgs/html.svg";
-import MbButton from "../../common/MbButton";
 
-function CardAccordionItem({ cardData, onShow, onHide, isActive, id }) {
-	const {
-		projectName,
-		projectDescription,
-		gitHubLink,
-		liveLink,
-		image: { src, alt },
-	} = cardData;
-
+function CardAccordionItem({ cardData, isActive, onHide, onShow }) {
 	// generate array with logos based on tech used
 	function getLogos() {
 		return cardData.techUsed.map((tech, index) => {
@@ -50,30 +45,22 @@ function CardAccordionItem({ cardData, onShow, onHide, isActive, id }) {
 	}
 
 	return (
-		<div>
-			<div>Card {id}</div>
+		<>
+			{/* Card (Open/Closed) rendered based on if active */}
 			{isActive ? (
-				<div>
-					<img alt={alt} src={src} className="screenshot" />
-					<h3>{projectName}</h3>
-					<p>{projectDescription}</p>
-					<div className="links">
-						<a href={gitHubLink} target="_blank">
-							GitHub
-						</a>
-						<a href={liveLink} target="_blank">
-							Live Website
-						</a>
-					</div>
-					<div className="tech">{getLogos()}</div>
-				</div>
+				<OpenCard
+					cardData={cardData}
+					getLogos={getLogos}
+					onHide={onHide}
+				/>
 			) : (
-				<></>
+				<ClosedCard
+					cardData={cardData}
+					getLogos={getLogos}
+					onShow={onShow}
+				/>
 			)}
-			<MbButton onClick={isActive ? onHide : () => onShow(id)}>
-				{isActive ? "Close" : " Open"}
-			</MbButton>
-		</div>
+		</>
 	);
 }
 

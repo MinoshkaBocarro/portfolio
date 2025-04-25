@@ -1,0 +1,123 @@
+@use "../abstracts/" as *;
+
+.card {
+	border: 5px solid transparent;
+	text-align: center;
+	padding: 20px;
+	transition: transform 0.3s ease-in-out;
+	transform: scale(1);
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.647);
+}
+
+.project-hovered {
+	transform: scale(1.01);
+}
+
+.card.open {
+	display: grid;
+	height: 500px;
+	padding: 20px;
+	grid-template-columns: 4fr 3fr;
+	grid-template-rows: 0.3fr 1fr 1fr 2fr 1fr 0.3fr;
+	grid-template-areas:
+		"screenshot close"
+		"screenshot title"
+		"screenshot body"
+		"screenshot logos"
+		"screenshot links"
+		"screenshot .";
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	align-content: center;
+	gap: 20px;
+	transition: transform 0.3s ease-in-out;
+
+	.screenshot {
+		grid-area: screenshot;
+		height: 420px;
+		width: auto;
+	}
+
+	button {
+		grid-area: close;
+		width: 30px;
+		justify-self: end;
+	}
+
+	h3 {
+		grid-area: title;
+		color: $primaryColor;
+		font-weight: 600;
+	}
+
+	p {
+		grid-area: body;
+		font-size: 1.2rem;
+		padding: 0px 30px;
+	}
+
+	.links {
+		grid-area: links;
+		display: flex;
+		gap: 30px;
+		padding-left: 30px;
+	}
+
+	.tech {
+		grid-area: logos;
+		display: flex;
+		justify-self: center;
+		gap: 5px;
+
+		.logo {
+			height: 50px;
+		}
+	}
+}
+
+.card.closed {
+	display: grid;
+	height: 420px;
+	width: 560px;
+	padding: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+		"title title"
+		"screenshot screenshot"
+		"logos open";
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	transition: transform 0.3s ease-in-out;
+
+	.screenshot {
+		grid-area: screenshot;
+		height: auto;
+		width: 520px;
+	}
+
+	button {
+		grid-area: open;
+		width: 30px;
+		justify-self: end;
+	}
+
+	h3 {
+		grid-area: title;
+		min-width: max-content;
+		justify-self: center;
+	}
+
+	.tech {
+		grid-area: logos;
+		display: flex;
+		gap: 5px;
+	}
+
+	.logo {
+		height: 30px;
+	}
+}

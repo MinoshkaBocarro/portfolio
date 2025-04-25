@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// components
+//Components
 import CardAccordionItem from "./CardAccordionItem";
 
 function CardAccordionList({ cardsInfo }) {
@@ -13,7 +13,6 @@ function CardAccordionList({ cardsInfo }) {
 	function handleHide() {
 		setActiveIndex(0);
 	}
-
 	return (
 		<>
 			{cardsInfo.map((card) => {
@@ -23,9 +22,8 @@ function CardAccordionList({ cardsInfo }) {
 						cardData={card}
 						key={id}
 						onShow={(ref) => handleShow(id, ref)}
-						onHide={() => handleHide(id)}
 						isActive={id === activeIndex ? true : false}
-						id={id}
+						onHide={() => handleHide(id)}
 					/>
 				);
 			})}
