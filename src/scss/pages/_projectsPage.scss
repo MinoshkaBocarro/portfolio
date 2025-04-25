@@ -1,0 +1,9 @@
+.projects-page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 65px 10px;
+	grid-area: projects;
+	margin-bottom: 40px;
+	justify-content: space-between;
+}
