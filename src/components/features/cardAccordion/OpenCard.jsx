@@ -33,6 +33,16 @@ function OpenCard({ cardData, onHide, getLogos }) {
 				</a>
 			</div>
 			<div className="tech">{getLogos()}</div>
+
+			{/* Border placement */}
+			<div className="corner corner-top-left-up"></div>
+			<div className="corner corner-top-left-down"></div>
+			<div className="corner corner-top-right-up"></div>
+			<div className="corner corner-top-right-down"></div>
+			<div className="corner corner-bottom-left-up"></div>
+			<div className="corner corner-bottom-left-down"></div>
+			<div className="corner corner-bottom-right-up"></div>
+			<div className="corner corner-bottom-right-down"></div>
 		</div>
 	);
 }

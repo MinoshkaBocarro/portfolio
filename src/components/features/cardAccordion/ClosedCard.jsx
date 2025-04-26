@@ -24,6 +24,16 @@ function ClosedCard({ cardData, onShow, getLogos }) {
 			<img alt={alt} src={src} className="screenshot" />
 			<div className="tech">{getLogos()}</div>
 			<MbButton onClick={() => onShow(ref)}>&#8964;</MbButton>
+
+			{/* Border placement */}
+			<div className="corner corner-top-left-up"></div>
+			<div className="corner corner-top-left-down"></div>
+			<div className="corner corner-top-right-up"></div>
+			<div className="corner corner-top-right-down"></div>
+			<div className="corner corner-bottom-left-up"></div>
+			<div className="corner corner-bottom-left-down"></div>
+			<div className="corner corner-bottom-right-up"></div>
+			<div className="corner corner-bottom-right-down"></div>
 		</div>
 	);
 }

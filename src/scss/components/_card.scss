@@ -8,6 +8,68 @@
 	transform: scale(1);
 	position: relative;
 	background-color: rgba(255, 255, 255, 0.647);
+
+	.corner {
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		z-index: -5;
+		background: url("../assets/card-border.png") no-repeat;
+		background-size: contain;
+		filter: brightness(0) saturate(100%) invert(54%) sepia(58%)
+			saturate(524%) hue-rotate(329deg) brightness(97%) contrast(91%);
+
+		&-top-left {
+			&-up {
+				top: -30px;
+				left: 0;
+			}
+			&-down {
+				top: 0px;
+				left: -30px;
+				transform: rotate(270deg);
+			}
+		}
+
+		&-top-right {
+			&-up {
+				top: -30px;
+				right: 0;
+				transform: rotate(360deg);
+			}
+			&-down {
+				top: 0px;
+				right: -30px;
+				transform: rotate(90deg);
+			}
+		}
+
+		&-bottom-left {
+			&-up {
+				bottom: 0px;
+				left: -30px;
+				transform: rotate(-90deg);
+			}
+			&-down {
+				bottom: -30px;
+				left: 0;
+				transform: rotate(-180deg);
+			}
+		}
+
+		&-bottom-right {
+			&-up {
+				bottom: 0px;
+				right: -30px;
+				transform: rotate(90deg);
+			}
+			&-down {
+				bottom: -30px;
+				right: 0;
+				transform: rotate(180deg);
+			}
+		}
+	}
 }
 
 .project-hovered {
