@@ -5,7 +5,7 @@ function Footer() {
 		<>
 			<Divider />
 			<footer className="footer-content">
-				<span>&copy; 2025 Minoshka Bocarro</span>
+				<span>&copy; 2025 Realm Keeper ~ Minoshka Bocarro</span>
 			</footer>
 		</>
 	);
