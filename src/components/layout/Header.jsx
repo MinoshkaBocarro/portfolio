@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 // Images
 import favicon from "../../assets/favicons/favicon.svg";
 
+// Components
+import Divider from "../common/Divider";
+
 function Header() {
 	return (
 		<>
@@ -40,6 +43,7 @@ function Header() {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
+			<Divider />
 		</>
 	);
 }
