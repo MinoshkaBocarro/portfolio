@@ -1,6 +1,8 @@
 import { useState } from "react";
 
+// Components
 import CardAccordionList from "../components/features/cardAccordion/CardAccordionList";
+import Title from "../components/common/Title";
 
 // Images
 import todoScreenshot from "../assets/projects/todo-screenshot.png";
@@ -94,7 +96,7 @@ function Projects() {
 
 	return (
 		<>
-			<h1>My Projects</h1>
+			<Title>My Projects</Title>
 			<div className="projects-page">
 				<CardAccordionList cardsInfo={cards} />
 			</div>

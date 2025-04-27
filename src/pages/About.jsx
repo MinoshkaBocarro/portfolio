@@ -1,7 +1,10 @@
+// Components
+import Title from "../components/common/Title";
+
 function About() {
 	return (
 		<>
-			<h1>My Path</h1>
+			<Title>My Path</Title>
 			<div className="about-page">
 				<div className="direct">
 					<h2>Please check out my work and contacts</h2>
