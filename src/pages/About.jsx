@@ -1,3 +1,6 @@
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 // Components
 import Title from "../components/common/Title";
 
@@ -13,13 +16,13 @@ function About() {
 							href="https://github.com/MinoshkaBocarro"
 							target="_blank"
 						>
-							Github
+							<FaGithub />
 						</a>
 						<a
 							href="https://au.linkedin.com/in/minoshka-bocarro-360275205"
 							target="_blank"
 						>
-							LinkedIn
+							<FaLinkedin />
 						</a>
 					</div>
 				</div>

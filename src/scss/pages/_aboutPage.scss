@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+
+.about-page {
+	display: grid;
+	width: 1000px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "links information" "thanks thanks";
+	gap: 50px 40px;
+	margin-top: 40px;
+	margin-bottom: 45px;
+
+	.information {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		font-size: 1.3rem;
+		line-height: 2lh;
+		grid-area: information;
+	}
+
+	.direct {
+		text-align: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin-top: 5px;
+		position: sticky;
+		top: 30px;
+		height: min-content;
+	}
+
+	.links {
+		display: flex;
+		gap: 20px;
+
+		svg {
+			height: 60px;
+			width: auto;
+			color: $primaryColor;
+		}
+	}
+
+	.thanks {
+		font-size: 1.5rem;
+		margin-bottom: 10px;
+		grid-area: thanks;
+		justify-self: center;
+	}
+
+	b {
+		color: $primaryColor;
+	}
+
+	span {
+		color: $accentColor;
+	}
+}
