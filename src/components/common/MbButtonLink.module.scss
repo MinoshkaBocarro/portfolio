@@ -9,4 +9,8 @@
 	&:hover {
 		@extend %buttonGlowBase;
 	}
+
+	svg {
+		width: 40px;
+	}
 }

@@ -39,6 +39,19 @@
 		display: flex;
 		justify-content: center;
 		gap: 20px;
+		transition: all 0.3s ease-in-out;
 		grid-area: button;
+
+		img {
+			height: 50px;
+			width: auto;
+			padding-top: 5px;
+			transition: opacity 0.3s ease-in-out;
+			align-self: center;
+
+			&:last-child {
+				transform: scale(-1, 1);
+			}
+		}
 	}
 }
