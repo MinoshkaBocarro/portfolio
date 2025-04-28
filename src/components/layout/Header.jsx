@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
 
 // Images
 import favicon from "../../assets/favicons/favicon.svg";
@@ -8,15 +9,48 @@ import favicon from "../../assets/favicons/favicon.svg";
 import Divider from "../common/Divider";
 
 function Header() {
+	// Favicon glow handling
+	const glowItem = useRef(null);
+	const [glowState, setGlowState] = useState(false);
+	const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+
+	function handleGlowOn() {
+		setGlowState(true);
+	}
+
+	function handleGlowOff() {
+		setGlowState(false);
+	}
+
+	function handleGlow(e) {
+		const { clientX, clientY } = e;
+		setCursorPosition({ x: clientX - 10, y: clientY - 10 });
+	}
+
 	return (
 		<>
 			<Navbar id="navbar" className="mb-2 navbar-class" variant="dark">
 				<Container>
+					{glowState ? (
+						<div
+							className="glow"
+							style={{
+								left: `${cursorPosition.x}px`,
+								top: `${cursorPosition.y}px`,
+							}}
+						></div>
+					) : (
+						<div className="glow hide"></div>
+					)}
 					<Navbar.Brand as={Link} to="/">
 						<img
 							src={favicon}
 							alt="MB Logo for Minoshka Bocarro"
 							className="favicon glow-area"
+							onMouseEnter={handleGlowOn}
+							onMouseMove={handleGlow}
+							onMouseLeave={handleGlowOff}
+							ref={glowItem}
 						/>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
