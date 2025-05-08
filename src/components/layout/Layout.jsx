@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 import { Outlet } from "react-router-dom";
+import PageTransition from "../../transitions/PageTransition";
 
 const starArray = [
 	{ x: 1134, y: 341 },
@@ -307,12 +308,16 @@ function Layout() {
 					))}
 				</svg>
 				<Container>
-					<div id="page-container">
-						<Outlet />
-					</div>
+					<PageTransition>
+						<div id="page-container">
+							<Outlet />
+						</div>
+					</PageTransition>
 				</Container>
 			</div>
-			<Footer />
+			<PageTransition>
+				<Footer />
+			</PageTransition>
 		</div>
 	);
 }
