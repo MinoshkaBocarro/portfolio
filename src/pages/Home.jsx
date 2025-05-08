@@ -1,4 +1,5 @@
 import { useState } from "react";
+import anvilSound from "../assets/anvil-sound.wav";
 
 // Components
 import MbButtonLink from "../components/common/MbButtonLink";
@@ -8,9 +9,11 @@ import forgeIcon from "../assets/forge.svg";
 
 const Home = () => {
 	const [iconState, setIconState] = useState(false);
+	const audio = new Audio(anvilSound);
 
 	function iconOn() {
 		setIconState(true);
+		audio.play();
 	}
 
 	function iconOff() {
