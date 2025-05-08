@@ -13,3 +13,10 @@ footer {
 		color: $textColor;
 	}
 }
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	background-color: $backgroundColor;
+	align-items: center;
+}
