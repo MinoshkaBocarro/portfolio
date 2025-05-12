@@ -5,12 +5,12 @@ import CardAccordionList from "../components/features/cardAccordion/CardAccordio
 import Title from "../components/common/Title";
 
 // Images
-import todoScreenshot from "../assets/projects/todo-screenshot.png";
-import weatherAppScreenshot from "../assets/projects/weather-app-screenshot.png";
-import calculatorScreenshot from "../assets/projects/calculator-screenshot.png";
-import ticTacToeScreenshot from "../assets/projects/tic-tac-toe-screenshot.png";
-import adminDashboardScreenshot from "../assets/projects/admin-dashboard-screenshot.png";
-import signUpFormScreenshot from "../assets/projects/sign-up-form-screenshot.png";
+import todoScreenshot from "../assets/projects/todo-screenshot.jpg";
+import weatherAppScreenshot from "../assets/projects/weather-app-screenshot.jpg";
+import calculatorScreenshot from "../assets/projects/calculator-screenshot.jpg";
+import ticTacToeScreenshot from "../assets/projects/tic-tac-toe-screenshot.jpg";
+import adminDashboardScreenshot from "../assets/projects/admin-dashboard-screenshot.jpg";
+import signUpFormScreenshot from "../assets/projects/sign-up-form-screenshot.jpg";
 
 function Projects() {
 	const [cards] = useState([
