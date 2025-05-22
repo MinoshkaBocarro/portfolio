@@ -11,9 +11,15 @@ const Home = () => {
 	const [iconState, setIconState] = useState(false);
 	const audio = new Audio(anvilSound);
 
+	const handleClick = () => {
+		audio.play();
+	};
+
 	function iconOn() {
 		setIconState(true);
-		audio.play();
+		audio.play().catch((error) => {
+			return error.message;
+		});
 	}
 
 	function iconOff() {
@@ -31,6 +37,7 @@ const Home = () => {
 					onMouseEnter={iconOn}
 					onMouseLeave={iconOff}
 					to={"/Projects"}
+					onClick={handleClick}
 				>
 					Check Out My Projects
 				</MbButtonLink>
