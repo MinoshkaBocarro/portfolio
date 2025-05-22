@@ -36,7 +36,7 @@ const Home = () => {
 				<MbButtonLink
 					onMouseEnter={iconOn}
 					onMouseLeave={iconOff}
-					to={"/Projects"}
+					to={"/projects"}
 					onClick={handleClick}
 				>
 					Check Out My Projects
