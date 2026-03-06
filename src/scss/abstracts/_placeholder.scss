@@ -25,13 +25,17 @@
 
 @keyframes forge-glow-effect {
 	0% {
-		box-shadow: 0 0 2px $accentColor, 0 0 3px $accentColor,
-			0 0 4px $accentColor;
+		box-shadow:
+			0 0 2px $primaryColor,
+			0 0 3px $primaryColor,
+			0 0 4px $primaryColor;
 		transform: scale(1.02);
 	}
 	100% {
-		box-shadow: 0 0 4px $accentColor, 0 0 6px $accentColor,
-			0 0 8px $accentColor;
+		box-shadow:
+			0 0 4px $primaryColor,
+			0 0 6px $primaryColor,
+			0 0 8px $primaryColor;
 		transform: scale(1.04);
 	}
 }
