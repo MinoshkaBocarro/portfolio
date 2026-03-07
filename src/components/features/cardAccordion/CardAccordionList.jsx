@@ -4,7 +4,7 @@ import { useState } from "react";
 import CardAccordionItem from "./CardAccordionItem";
 
 function CardAccordionList({ cardsInfo }) {
-	const [activeIndex, setActiveIndex] = useState(1);
+	const [activeIndex, setActiveIndex] = useState(0);
 
 	function handleShow(id) {
 		setActiveIndex(id);
@@ -21,7 +21,7 @@ function CardAccordionList({ cardsInfo }) {
 					<CardAccordionItem
 						cardData={card}
 						key={id}
-						onShow={(ref) => handleShow(id, ref)}
+						onShow={() => handleShow(id)}
 						isActive={id === activeIndex ? true : false}
 						onHide={() => handleHide(id)}
 					/>

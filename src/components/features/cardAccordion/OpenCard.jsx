@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Components
 import MbButton from "../../common/MbButton";
@@ -14,11 +14,23 @@ function OpenCard({ cardData, onHide, getLogos }) {
 
 	const [isHovered, setIsHovered] = useState(false);
 
+	const scrollRef = useRef(null);
+
+	useEffect(() => {
+		if (scrollRef.current) {
+			scrollRef.current.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		}
+	}, []);
+
 	return (
 		<div
 			className={`card open ${isHovered ? "project-hovered" : ""}`}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
+			ref={scrollRef}
 		>
 			<img alt={alt} src={src} className="screenshot" />
 			<MbButton onClick={onHide}>^</MbButton>
