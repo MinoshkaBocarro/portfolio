@@ -2,12 +2,21 @@
 
 .about-page {
 	display: grid;
-	width: 1000px;
+	padding: 0 40px;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: "links information" "thanks thanks";
 	gap: 50px 40px;
 	margin-top: 40px;
 	margin-bottom: 45px;
+
+	@media (max-width: $lg) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"information"
+			"thanks"
+			"links";
+		text-align: center;
+	}
 
 	.information {
 		display: flex;
@@ -16,6 +25,10 @@
 		font-size: 1.3rem;
 		line-height: 2lh;
 		grid-area: information;
+
+		@media (max-width: $lg) {
+			gap: 30px;
+		}
 	}
 
 	.direct {
