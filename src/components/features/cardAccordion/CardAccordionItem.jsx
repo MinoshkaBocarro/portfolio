@@ -6,6 +6,9 @@ import ClosedCard from "./ClosedCard";
 import jsLogo from "../../../assets/logo-svgs/js.svg";
 import cssLogo from "../../../assets/logo-svgs/css.svg";
 import htmlLogo from "../../../assets/logo-svgs/html.svg";
+import tailwindLogo from "../../../assets/logo-svgs/tailwind.svg";
+import reactLogo from "../../../assets/logo-svgs/react.svg";
+import nextLogo from "../../../assets/logo-svgs/next.svg";
 
 function CardAccordionItem({ cardData, isActive, onHide, onShow }) {
 	// generate array with logos based on tech used
@@ -27,6 +30,36 @@ function CardAccordionItem({ cardData, isActive, onHide, onShow }) {
 						className="logo"
 						alt="css logo"
 						src={cssLogo}
+						key={index}
+					/>
+				);
+			}
+			if (tech === "tailwind") {
+				return (
+					<img
+						className="logo"
+						alt="tailwind logo"
+						src={tailwindLogo}
+						key={index}
+					/>
+				);
+			}
+			if (tech === "react") {
+				return (
+					<img
+						className="logo"
+						alt="react logo"
+						src={reactLogo}
+						key={index}
+					/>
+				);
+			}
+			if (tech === "next") {
+				return (
+					<img
+						className="logo"
+						alt="next logo"
+						src={nextLogo}
 						key={index}
 					/>
 				);

@@ -5,6 +5,7 @@ import CardAccordionList from "../components/features/cardAccordion/CardAccordio
 import Title from "../components/common/Title";
 
 // Images
+import nookBookScreenShot from "../assets/projects/nook-books-screenshot.jpg";
 import todoScreenshot from "../assets/projects/todo-screenshot.jpg";
 import weatherAppScreenshot from "../assets/projects/weather-app-screenshot.jpg";
 import calculatorScreenshot from "../assets/projects/calculator-screenshot.jpg";
@@ -16,6 +17,18 @@ function Projects() {
 	const [cards] = useState([
 		{
 			projectNumber: 1,
+			projectName: "Nook Books",
+			projectDescription: "A stripped back, book genre showcase.",
+			techUsed: ["react", "next", "tailwind"],
+			gitHubLink: "https://github.com/MinoshkaBocarro/nook-books",
+			liveLink: "https://nookbooks.vercel.app/",
+			image: {
+				src: nookBookScreenShot,
+				alt: "screenshot of Nook Books website",
+			},
+		},
+		{
+			projectNumber: 2,
 			projectName: "Todo List",
 			projectDescription:
 				"A simple, schoolbook styled website to manage all your project todos.",
@@ -28,7 +41,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 2,
+			projectNumber: 3,
 			projectName: "Weather App",
 			projectDescription:
 				"Weather app that shows the current weather, hourly weather and three day forecast.",
@@ -41,7 +54,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 3,
+			projectNumber: 4,
 			projectName: "Calculator",
 			projectDescription:
 				"Old school beginner calculator with complete functionality.",
@@ -54,7 +67,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 4,
+			projectNumber: 5,
 			projectName: "Tic Tac Toe",
 			projectDescription:
 				"A game of tic tac toe played with a friend next to you",
@@ -67,7 +80,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 5,
+			projectNumber: 6,
 			projectName: "Admin Dashboard",
 			projectDescription:
 				"A dashboard layout created based on a given design using CSS Grid",
@@ -80,7 +93,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 6,
+			projectNumber: 7,
 			projectName: "Sign Up Form",
 			projectDescription:
 				"A dummy sign up form styled using Flexbox with client-side validation through css and javascript",
