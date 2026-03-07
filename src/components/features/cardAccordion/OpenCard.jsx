@@ -32,9 +32,9 @@ function OpenCard({ cardData, onHide, getLogos }) {
 			onMouseLeave={() => setIsHovered(false)}
 			ref={scrollRef}
 		>
-			<img alt={alt} src={src} className="screenshot" />
 			<MbButton onClick={onHide}>^</MbButton>
 			<h3>{projectName}</h3>
+			<img alt={alt} src={src} className="screenshot" />
 			<p>{projectDescription}</p>
 			<div className="links">
 				<a href={gitHubLink} target="_blank">

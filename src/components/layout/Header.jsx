@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 
@@ -36,7 +36,7 @@ function Header() {
 				collapseOnSelect
 				expand="lg"
 			>
-				<Container>
+				<div className="container">
 					{glowState ? (
 						<div
 							className="glow"
@@ -81,7 +81,7 @@ function Header() {
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
-				</Container>
+				</div>
 			</Navbar>
 			<Divider />
 		</>

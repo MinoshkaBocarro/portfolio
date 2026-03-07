@@ -307,13 +307,11 @@ function Layout() {
 						</text>
 					))}
 				</svg>
-				<Container>
-					<PageTransition>
-						<div id="page-container">
-							<Outlet />
-						</div>
-					</PageTransition>
-				</Container>
+				<PageTransition>
+					<div id="page-container">
+						<Outlet />
+					</div>
+				</PageTransition>
 			</div>
 			<PageTransition>
 				<Footer />
