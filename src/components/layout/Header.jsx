@@ -29,7 +29,13 @@ function Header() {
 
 	return (
 		<>
-			<Navbar id="navbar" className="mb-2 navbar-class" variant="dark">
+			<Navbar
+				id="navbar"
+				className="mb-2 navbar-class"
+				variant="light"
+				collapseOnSelect
+				expand="lg"
+			>
 				<Container>
 					{glowState ? (
 						<div
@@ -53,8 +59,8 @@ function Header() {
 							ref={glowItem}
 						/>
 					</Navbar.Brand>
-					<Navbar.Toggle aria-controls="basic-navbar-nav" />
-					<Navbar.Collapse id="basic-navbar-nav">
+					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="ms-auto navbar-custom">
 							<Nav.Link as={Link} to="/" className="px-3 fs-5">
 								Home

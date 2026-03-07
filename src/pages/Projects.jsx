@@ -18,7 +18,7 @@ function Projects() {
 		{
 			projectNumber: 1,
 			projectName: "Nook Books",
-			projectDescription: "A stripped back, book genre showcase.",
+			projectDescription: "A stripped back, book showcase by genre.",
 			techUsed: ["react", "next", "tailwind"],
 			gitHubLink: "https://github.com/MinoshkaBocarro/nook-books",
 			liveLink: "https://nookbooks.vercel.app/",
