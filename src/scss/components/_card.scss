@@ -78,11 +78,12 @@
 
 .card.open {
 	display: grid;
+	height: auto;
 	height: 500px;
 	grid-column: span 2;
 	padding: 20px;
 	grid-template-columns: 4fr 3fr;
-	grid-template-rows: 0.3fr 1fr 1fr 2fr 1fr 0.3fr;
+	grid-template-rows: auto auto auto auto auto auto;
 	grid-template-areas:
 		"screenshot close"
 		"screenshot title"
@@ -94,7 +95,7 @@
 	justify-items: center;
 	align-items: center;
 	align-content: center;
-	gap: 20px;
+	gap: 30px;
 	transition: transform 0.3s ease-in-out;
 
 	@media (max-width: $lg) {
@@ -112,8 +113,8 @@
 
 	.screenshot {
 		grid-area: screenshot;
-		height: 420px;
-		width: auto;
+		height: auto;
+		width: 800px;
 
 		@media (max-width: $lg) {
 			height: auto;
@@ -143,7 +144,6 @@
 		grid-area: links;
 		display: flex;
 		gap: 30px;
-		padding-left: 30px;
 	}
 
 	.tech {

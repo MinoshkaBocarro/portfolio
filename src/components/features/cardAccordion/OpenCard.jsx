@@ -37,9 +37,11 @@ function OpenCard({ cardData, onHide, getLogos }) {
 			<img alt={alt} src={src} className="screenshot" />
 			<p>{projectDescription}</p>
 			<div className="links">
-				<a href={gitHubLink} target="_blank">
-					GitHub
-				</a>
+				{gitHubLink && (
+					<a href={gitHubLink} target="_blank">
+						GitHub
+					</a>
+				)}
 				<a href={liveLink} target="_blank">
 					Live Website
 				</a>

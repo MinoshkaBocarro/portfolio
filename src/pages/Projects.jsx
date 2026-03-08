@@ -12,6 +12,8 @@ import calculatorScreenshot from "../assets/projects/calculator-screenshot.webp"
 import ticTacToeScreenshot from "../assets/projects/tic-tac-toe-screenshot.webp";
 import adminDashboardScreenshot from "../assets/projects/admin-dashboard-screenshot.webp";
 import signUpFormScreenshot from "../assets/projects/sign-up-form-screenshot.webp";
+import theWatchtowerScreenshot from "../assets/projects/the-watchtower-screenshot.webp";
+import pecoAndCoScreenshot from "../assets/projects/peco-and-co-screenshot.webp";
 
 function Projects() {
 	const [cards] = useState([
@@ -29,6 +31,31 @@ function Projects() {
 		},
 		{
 			projectNumber: 2,
+			projectName: "The Watchtower",
+			projectDescription:
+				"A watchlist website where you can track and organise your shows.",
+			techUsed: ["react", "css"],
+			gitHubLink: "https://github.com/MinoshkaBocarro/the-watchtower",
+			liveLink: "https://thewatchtowerwatchlist.onrender.com/",
+			image: {
+				src: theWatchtowerScreenshot,
+				alt: "screenshot of The Watchtower website",
+			},
+		},
+		{
+			projectNumber: 3,
+			projectName: "Peco&Co Client Website",
+			projectDescription:
+				"A website for a small business owner to help promote their services, created on WordPress as part of a team project",
+			techUsed: ["wordpress"],
+			liveLink: "https://pecoandco.com.au/",
+			image: {
+				src: pecoAndCoScreenshot,
+				alt: "screenshot of Peco and Co client website",
+			},
+		},
+		{
+			projectNumber: 4,
 			projectName: "Todo List",
 			projectDescription:
 				"A simple, schoolbook styled website to manage all your project todos.",
@@ -41,7 +68,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 3,
+			projectNumber: 5,
 			projectName: "Weather App",
 			projectDescription:
 				"Weather app that shows the current weather, hourly weather and three day forecast.",
@@ -54,7 +81,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 4,
+			projectNumber: 6,
 			projectName: "Calculator",
 			projectDescription:
 				"Old school beginner calculator with complete functionality.",
@@ -67,10 +94,10 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 5,
+			projectNumber: 7,
 			projectName: "Tic Tac Toe",
 			projectDescription:
-				"A game of tic tac toe played with a friend next to you",
+				"A game of tic tac toe played with a friend next to you in javascript",
 			techUsed: ["js", "html", "css"],
 			gitHubLink: "https://github.com/MinoshkaBocarro/tic-tac-toe",
 			liveLink: "https://minoshkabocarro.github.io/tic-tac-toe/",
@@ -80,7 +107,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 6,
+			projectNumber: 8,
 			projectName: "Admin Dashboard",
 			projectDescription:
 				"A dashboard layout created based on a given design using CSS Grid",
@@ -93,7 +120,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 7,
+			projectNumber: 9,
 			projectName: "Sign Up Form",
 			projectDescription:
 				"A dummy sign up form styled using Flexbox with client-side validation through css and javascript",

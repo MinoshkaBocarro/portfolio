@@ -9,6 +9,7 @@ import htmlLogo from "../../../assets/logo-svgs/html.svg";
 import tailwindLogo from "../../../assets/logo-svgs/tailwind.svg";
 import reactLogo from "../../../assets/logo-svgs/react.svg";
 import nextLogo from "../../../assets/logo-svgs/next.svg";
+import wordpressLogo from "../../../assets/logo-svgs/wordpress.svg";
 
 function CardAccordionItem({ cardData, isActive, onHide, onShow }) {
 	// generate array with logos based on tech used
@@ -70,6 +71,16 @@ function CardAccordionItem({ cardData, isActive, onHide, onShow }) {
 						className="logo"
 						alt="html logo"
 						src={htmlLogo}
+						key={index}
+					/>
+				);
+			}
+			if (tech === "wordpress") {
+				return (
+					<img
+						className="logo"
+						alt="wordpress logo"
+						src={wordpressLogo}
 						key={index}
 					/>
 				);
