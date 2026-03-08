@@ -5,13 +5,13 @@ import CardAccordionList from "../components/features/cardAccordion/CardAccordio
 import Title from "../components/common/Title";
 
 // Images
-import nookBookScreenShot from "../assets/projects/nook-books-screenshot.jpg";
-import todoScreenshot from "../assets/projects/todo-screenshot.jpg";
-import weatherAppScreenshot from "../assets/projects/weather-app-screenshot.jpg";
-import calculatorScreenshot from "../assets/projects/calculator-screenshot.jpg";
-import ticTacToeScreenshot from "../assets/projects/tic-tac-toe-screenshot.jpg";
-import adminDashboardScreenshot from "../assets/projects/admin-dashboard-screenshot.jpg";
-import signUpFormScreenshot from "../assets/projects/sign-up-form-screenshot.jpg";
+import nookBookScreenShot from "../assets/projects/nook-books-screenshot.webp";
+import todoScreenshot from "../assets/projects/todo-screenshot.webp";
+import weatherAppScreenshot from "../assets/projects/weather-app-screenshot.webp";
+import calculatorScreenshot from "../assets/projects/calculator-screenshot.webp";
+import ticTacToeScreenshot from "../assets/projects/tic-tac-toe-screenshot.webp";
+import adminDashboardScreenshot from "../assets/projects/admin-dashboard-screenshot.webp";
+import signUpFormScreenshot from "../assets/projects/sign-up-form-screenshot.webp";
 
 function Projects() {
 	const [cards] = useState([
