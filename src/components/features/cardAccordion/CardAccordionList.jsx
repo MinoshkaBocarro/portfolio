@@ -16,7 +16,7 @@ function CardAccordionList({ cardsInfo }) {
 	return (
 		<>
 			{cardsInfo.map((card) => {
-				const id = card.projectNumber;
+				const id = card.projectIdentifier;
 				return (
 					<CardAccordionItem
 						cardData={card}

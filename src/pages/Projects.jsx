@@ -14,36 +14,44 @@ import adminDashboardScreenshot from "../assets/projects/admin-dashboard-screens
 import signUpFormScreenshot from "../assets/projects/sign-up-form-screenshot.webp";
 import theWatchtowerScreenshot from "../assets/projects/the-watchtower-screenshot.webp";
 import pecoAndCoScreenshot from "../assets/projects/peco-and-co-screenshot.webp";
+import wistfullyWagashiScreenshot from "../assets/projects/wistfully-wagashi-screenshot.webp";
+import scheduliteScreenshot from "../assets/projects/schedulite-screenshot.webp";
 
 function Projects() {
 	const [cards] = useState([
 		{
-			projectNumber: 1,
-			projectName: "Nook Books",
-			projectDescription: "A stripped back, book showcase by genre.",
-			techUsed: ["react", "next", "tailwind"],
-			gitHubLink: "https://github.com/MinoshkaBocarro/nook-books",
-			liveLink: "https://nookbooks.vercel.app/",
-			image: {
-				src: nookBookScreenShot,
-				alt: "screenshot of Nook Books website",
-			},
-		},
-		{
-			projectNumber: 2,
-			projectName: "The Watchtower",
+			projectIdentifier: 1011,
+			projectName: "Wistfully Wagashi",
 			projectDescription:
-				"A watchlist website where you can track and organise your shows.",
-			techUsed: ["react", "css"],
-			gitHubLink: "https://github.com/MinoshkaBocarro/the-watchtower",
-			liveLink: "https://thewatchtowerwatchlist.onrender.com/",
+				"A e-commerce website for Japanese confectionary.",
+			techUsed: [
+				"react",
+				"vanilla extract",
+				"node.js",
+				"express",
+				"firebase",
+			],
+			gitHubLink: "https://github.com/MinoshkaBocarro/wistfully-wagashi",
+			liveLink: "https://wistfullywagashi.onrender.com",
 			image: {
-				src: theWatchtowerScreenshot,
-				alt: "screenshot of The Watchtower website",
+				src: wistfullyWagashiScreenshot,
+				alt: "screenshot of Wistfully Wagashi website",
 			},
 		},
 		{
-			projectNumber: 3,
+			projectIdentifier: 931,
+			projectName: "Schedulite",
+			projectDescription: "A scheduling website for events.",
+			techUsed: ["react", "sass", "node.js", "graphQL", "mongoDB"],
+			gitHubLink: "https://github.com/MinoshkaBocarro/schedulite",
+			liveLink: "https://schedulite.onrender.com",
+			image: {
+				src: scheduliteScreenshot,
+				alt: "screenshot of Schedulite website",
+			},
+		},
+		{
+			projectIdentifier: 1121,
 			projectName: "Peco&Co Client Website",
 			projectDescription:
 				"A website for a small business owner to help promote their services, created on WordPress as part of a team project",
@@ -55,7 +63,32 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 4,
+			projectIdentifier: 821,
+			projectName: "Nook Books",
+			projectDescription: "A stripped back, book showcase by genre.",
+			techUsed: ["react", "next", "tailwind"],
+			gitHubLink: "https://github.com/MinoshkaBocarro/nook-books",
+			liveLink: "https://nookbooks.vercel.app/",
+			image: {
+				src: nookBookScreenShot,
+				alt: "screenshot of Nook Books website",
+			},
+		},
+		{
+			projectIdentifier: 751,
+			projectName: "The Watchtower",
+			projectDescription:
+				"A watchlist website where you can track and organise your shows.",
+			techUsed: ["react", "css"],
+			gitHubLink: "https://github.com/MinoshkaBocarro/the-watchtower",
+			liveLink: "https://thewatchtowerwatchlist.netlify.app/",
+			image: {
+				src: theWatchtowerScreenshot,
+				alt: "screenshot of The Watchtower website",
+			},
+		},
+		{
+			projectIdentifier: 622,
 			projectName: "Todo List",
 			projectDescription:
 				"A simple, schoolbook styled website to manage all your project todos.",
@@ -68,7 +101,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 5,
+			projectIdentifier: 233,
 			projectName: "Weather App",
 			projectDescription:
 				"Weather app that shows the current weather, hourly weather and three day forecast.",
@@ -81,7 +114,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 6,
+			projectIdentifier: 134,
 			projectName: "Calculator",
 			projectDescription:
 				"Old school beginner calculator with complete functionality.",
@@ -94,7 +127,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 7,
+			projectIdentifier: 324,
 			projectName: "Tic Tac Toe",
 			projectDescription:
 				"A game of tic tac toe played with a friend next to you in javascript",
@@ -107,7 +140,7 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 8,
+			projectIdentifier: 435,
 			projectName: "Admin Dashboard",
 			projectDescription:
 				"A dashboard layout created based on a given design using CSS Grid",
@@ -120,13 +153,13 @@ function Projects() {
 			},
 		},
 		{
-			projectNumber: 9,
+			projectIdentifier: 535,
 			projectName: "Sign Up Form",
 			projectDescription:
 				"A dummy sign up form styled using Flexbox with client-side validation through css and javascript",
 			techUsed: ["css", "html", "js"],
 			gitHubLink: "https://github.com/MinoshkaBocarro/sign-up-form",
-			liveLink: "",
+			liveLink: "https://minoshkabocarro.github.io/sign-up-form/",
 			image: {
 				src: signUpFormScreenshot,
 				alt: "screenshot of sign up form website",
